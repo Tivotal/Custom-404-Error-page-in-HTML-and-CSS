@@ -1,0 +1,125 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+.wrapper {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 15%;
+  right: 15%;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.wrapper .content .heading {
+  font-size: 18vw;
+  line-height: 1em;
+  position: relative;
+}
+
+.wrapper .content .heading::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: anim 10s ease-in-out infinite;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.wrapper .content h4 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000;
+  max-width: 600px;
+  position: relative;
+}
+
+.wrapper .content h4::after {
+  position: absolute;
+  content: attr(data-text);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #000;
+}
+
+.wrapper .content p {
+  font-size: 1.2em;
+  color: #0d0d0d;
+}
+
+.wrapper .content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+
+.wrapper .content .btns a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  border: 2px solid #c850c0;
+  color: #c850c0;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.wrapper .content .btns a:hover {
+  background: #c850c0;
+  color: #fff;
+}
